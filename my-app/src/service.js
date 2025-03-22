@@ -9,12 +9,23 @@ const item1={
 export default {
   getTasks: async () => {
     return await axios.get(`items`)
-    .then(x=>x.data || [])   
-    .catch(err=>{
-      console.log("eror"+err.message)
-      return [item1];
+    .then(x => {
+      console.log("API Response:", x.data);
+      return x.data || [];  
+    })   
+    .catch(err => {
+      console.log("eror" + err.message);
+      return []; // החזירי מערך ריק במקום item1
     });
   },
+  // getTasks: async () => {
+  //   return await axios.get(`items`)
+  //   .then(x=>x.data || [])   
+  //   .catch(err=>{
+  //     console.log("eror"+err.message)
+  //     return [item1];
+  //   });
+  // },
 
   addTask: async(name)=>{
     const item={

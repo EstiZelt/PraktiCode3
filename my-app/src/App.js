@@ -28,10 +28,7 @@ function App() {
   }
 
   useEffect(() => {
-    getTodos().then(()=>{
-      console.log(getTodos);
-      
-    });
+    getTodos();
   }, []);
 
   return (
