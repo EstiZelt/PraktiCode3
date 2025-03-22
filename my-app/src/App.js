@@ -28,7 +28,10 @@ function App() {
   }
 
   useEffect(() => {
-    getTodos();
+    getTodos().then(()=>{
+      console.log(getTodos);
+      
+    });
   }, []);
 
   return (
