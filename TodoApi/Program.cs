@@ -65,10 +65,10 @@ app.MapDelete("/items/{id:int}",async(int id,ToDoDbContext db) => {
     }
 });
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
 
+app.UseSwagger();
+app.UseSwaggerUI();
+
+
+app.MapGet("/",()=>"TodoApi is running!");
 app.Run();
