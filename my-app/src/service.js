@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
-axios.defaults.baseURL = "http://localhost:5114/"
+axios.defaults.baseURL = "process.env.REACT_APP_API_URL/"
 const item1={
   "id":12,
   "name":"name",
@@ -18,7 +18,7 @@ export default {
 
   addTask: async(name)=>{
     const item={
-      "id":Math.floor(Math.random() * 1000000),
+      // "id":Math.floor(Math.random() * 1000000),
       "name":name,
       "isComplate":false
     }
