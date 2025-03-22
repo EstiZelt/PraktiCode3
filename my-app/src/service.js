@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
-axios.defaults.baseURL = "process.env.REACT_APP_API_URL/"
+axios.defaults.baseURL =`${process.env.REACT_APP_API_URL}/`
 console.log("Using API URL:",axios.defaults.baseURL);
 const item1={
   "id":12,
