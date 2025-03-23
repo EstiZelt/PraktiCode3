@@ -1,0 +1,7 @@
+# Ignore other temporary or IDE files
+*.log
+.idea/
+.vscode/
+# Ignore debug build files
+TodoApi/obj/
+TodoApi/bin/
