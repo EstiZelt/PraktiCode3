@@ -3,7 +3,7 @@ const express = require('express');
 
 // יצירת אפליקציה חדשה של Express
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = 10000;
 
 const getRenderApps = async () => {
     try {
