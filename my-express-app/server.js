@@ -4,14 +4,14 @@ const axios = require('axios');
 // יצירת אפליקציה חדשה של Express
 const app = express();
 const PORT = process.env.PORT || 3000;
-URL=`https://api.render.com/v1/services?includePreviews=true&limit=20` 
+const api_URL=`https://api.render.com/v1/services?includePreviews=true&limit=20` 
 console.log("Trying to fetch from Render API...");
-console.log("url",URL);
+console.log("url",api_URL);
 console.log("API Key:", process.env.RENDER_API_KEY);
 //נתיב ברירת מחדל
 app.get('/', async (req, res) => {
     try {
-        const response = await axios.get(URL, {
+        const response = await axios.get(api_URL, {
             headers: {
                 'Authorization': `Bearer ${process.env.RENDER_API_KEY}`
             }
